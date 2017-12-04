@@ -1,0 +1,3 @@
+edu.psu.seersuite.extractors.tableextractor.extraction.SeerSuiteTableExtractor
+
+batch C:\Users\bnovelli\Documents\arquivosPDF C:\Users\bnovelli\Documents\arquivosPDF
