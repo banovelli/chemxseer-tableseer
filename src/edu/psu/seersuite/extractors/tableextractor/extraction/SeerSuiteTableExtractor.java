@@ -147,16 +147,20 @@ public class SeerSuiteTableExtractor {
     		extractor.setParser(parser);
     		metid = "1";
     		try {
-    			//System.out.println(pdfFile+" PDF FILE");
+    			System.out.println(pdfFile+" PDF FILE");
     			ArrayList<Table> extractedTableSet = extractor.extract(pdfFile,id, metid);
     			XMLOutputter outputter = new XMLOutputter(Format.getPrettyFormat());
+    			System.out.println(extractedTableSet+" extractedTableSet");
     			if(extractedTableSet != null) {
     				String tblFileName = getTableFile(filePath, id);
     				File tblFile = new File (tblFileName);
     				PrintWriter xmlWriter = new PrintWriter(new FileOutputStream(tblFile));
     				Document xmlDoc = extractor.getXMLDoc();
     				outputter.output(xmlDoc, xmlWriter);
-    				xmlWriter.close();	 
+    				xmlWriter.close();	
+    				System.out.println(xmlWriter+" xmlWriterE");
+    				System.out.println(tblFile+" tblFile");
+    				System.out.println("Acho que tudo ok");
     			}
     		}catch(Exception e) {
     			e.printStackTrace();
